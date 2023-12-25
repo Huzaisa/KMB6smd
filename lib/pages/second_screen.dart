@@ -4,7 +4,7 @@ import 'third_screen.dart';
 class SecondScreen extends StatelessWidget {
   final String name;
 
-  SecondScreen({required this.name});
+  const SecondScreen({super.key, required this.name});
 
   @override
   Widget build(BuildContext context) {
@@ -12,10 +12,11 @@ class SecondScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: Colors.blue,
         ),
-        title: Text('Second Screen', style: TextStyle(color: Colors.black)),
+        title:
+            const Text('Second Screen', style: TextStyle(color: Colors.black)),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -23,11 +24,11 @@ class SecondScreen extends StatelessWidget {
           Container(
             height: 1,
             color: Colors.black,
-            margin: EdgeInsets.symmetric(vertical: 5),
+            margin: const EdgeInsets.symmetric(vertical: 5),
           ),
-          SizedBox(height: 16),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
+          const SizedBox(height: 16),
+          const Padding(
+            padding: EdgeInsets.all(16.0),
             child: Align(
               alignment: Alignment.topLeft,
               child: Text('Welcome'),
@@ -38,12 +39,13 @@ class SecondScreen extends StatelessWidget {
             child: Align(
               alignment: Alignment.topLeft,
               child: Text(
-                '$name',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                name,
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
             ),
           ),
-          Expanded(
+          const Expanded(
             child: Center(
               child: Text(
                 'Selected User Name',
@@ -63,18 +65,18 @@ class SecondScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ThirdScreen(),
+                      builder: (context) => const ThirdScreen(),
                     ),
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  fixedSize: Size(310, 41),
+                  fixedSize: const Size(310, 41),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  backgroundColor: Color(0xFF2B637B),
+                  backgroundColor: const Color(0xFF2B637B),
                 ),
-                child: Text('Choose a User'),
+                child: const Text('Choose a User'),
               ),
             ),
           ),

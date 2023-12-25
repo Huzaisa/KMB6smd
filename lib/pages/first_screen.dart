@@ -5,12 +5,14 @@ class FirstScreen extends StatelessWidget {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController sentenceController = TextEditingController();
 
+  FirstScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: Text('First Screen'),
+        title: const Text('First Screen'),
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
@@ -32,15 +34,15 @@ class FirstScreen extends StatelessWidget {
                   width: 113,
                   decoration: BoxDecoration(
                     color: Colors.transparent,
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       image: AssetImage('assets/ic_photo.jpg'),
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.circular(20),
                   ),
                 ),
-                SizedBox(height: 50),
-                Container(
+                const SizedBox(height: 50),
+                SizedBox(
                   width: 310,
                   height: 41,
                   child: TextFormField(
@@ -48,7 +50,7 @@ class FirstScreen extends StatelessWidget {
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
-                        borderSide: BorderSide(),
+                        borderSide: const BorderSide(),
                       ),
                       labelText: 'Name',
                       filled: true,
@@ -56,8 +58,8 @@ class FirstScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 10),
-                Container(
+                const SizedBox(height: 10),
+                SizedBox(
                   width: 310,
                   height: 41,
                   child: TextFormField(
@@ -65,7 +67,7 @@ class FirstScreen extends StatelessWidget {
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
-                        borderSide: BorderSide(),
+                        borderSide: const BorderSide(),
                       ),
                       labelText: 'Polindrome',
                       filled: true,
@@ -73,8 +75,8 @@ class FirstScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 40),
-                Container(
+                const SizedBox(height: 40),
+                SizedBox(
                   width: 310,
                   height: 47,
                   child: ElevatedButton(
@@ -84,13 +86,13 @@ class FirstScreen extends StatelessWidget {
                       showDialog(
                         context: context,
                         builder: (context) => AlertDialog(
-                          title: Text('Palindrome Check'),
+                          title: const Text('Palindrome Check'),
                           content: Text(
                               isPalindrome ? 'Palindrome' : 'Not Palindrome'),
                           actions: [
                             TextButton(
                               onPressed: () => Navigator.pop(context),
-                              child: Text('OK'),
+                              child: const Text('OK'),
                             ),
                           ],
                         ),
@@ -100,13 +102,13 @@ class FirstScreen extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      backgroundColor: Color(0xFF2B637B),
+                      backgroundColor: const Color(0xFF2B637B),
                     ),
-                    child: Text('Check'),
+                    child: const Text('Check'),
                   ),
                 ),
-                SizedBox(height: 10),
-                Container(
+                const SizedBox(height: 10),
+                SizedBox(
                   width: 310,
                   height: 47,
                   child: ElevatedButton(
@@ -124,9 +126,9 @@ class FirstScreen extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      backgroundColor: Color(0xFF2B637B),
+                      backgroundColor: const Color(0xFF2B637B),
                     ),
-                    child: Text('Next'),
+                    child: const Text('Next'),
                   ),
                 ),
               ],

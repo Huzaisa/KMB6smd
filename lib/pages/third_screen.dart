@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ThirdScreen extends StatefulWidget {
+  const ThirdScreen({super.key});
+
   @override
   _ThirdScreenState createState() => _ThirdScreenState();
 }
@@ -41,14 +43,15 @@ class _ThirdScreenState extends State<ThirdScreen> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: Colors.blue,
         ),
-        title: Text('Third Screen', style: TextStyle(color: Colors.black)),
+        title:
+            const Text('Third Screen', style: TextStyle(color: Colors.black)),
       ),
       body: Column(
         children: [
-          Divider(
+          const Divider(
             thickness: 1,
             color: Colors.black,
           ),
@@ -76,30 +79,30 @@ class _ThirdScreenState extends State<ThirdScreen> {
                               backgroundImage:
                                   NetworkImage(users[index].avatar),
                             ),
-                            SizedBox(width: 10),
+                            const SizedBox(width: 10),
                             Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
                                     '${users[index].firstName} ${users[index].lastName}',
-                                    style: TextStyle(fontSize: 16),
+                                    style: const TextStyle(fontSize: 16),
                                   ),
-                                  SizedBox(height: 5),
+                                  const SizedBox(height: 5),
                                   Text(
                                     'Email: ${users[index].email}',
-                                    style: TextStyle(fontSize: 14),
+                                    style: const TextStyle(fontSize: 14),
                                   ),
                                 ],
                               ),
                             ),
                           ],
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Container(
                           height: 1,
                           color: Colors.black,
-                          margin: EdgeInsets.symmetric(vertical: 5),
+                          margin: const EdgeInsets.symmetric(vertical: 5),
                         ),
                       ],
                     ),
